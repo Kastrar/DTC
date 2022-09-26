@@ -9,7 +9,7 @@ namespace DTC.Items
 		public override void SetStaticDefaults()
 		{
 			// DisplayName.SetDefault("EvilSlasher"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
-			Tooltip.SetDefault("This is a basic modded sword.");
+			Tooltip.SetDefault("Lash out with the power of Eeeeviiiill!!1!");
 		}
 
 		public override void SetDefaults()
