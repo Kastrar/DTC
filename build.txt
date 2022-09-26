@@ -1,0 +1,3 @@
+displayName = Decadence Take Control
+author = Kastrar
+version = 0.1
