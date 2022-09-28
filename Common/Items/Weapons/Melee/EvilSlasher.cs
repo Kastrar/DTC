@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace DTC.Items
+namespace DTC.Common.Items.Weapons.Melee
 {
 	public class EvilSlasher : ModItem
 	{

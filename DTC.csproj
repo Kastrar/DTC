@@ -10,4 +10,12 @@
   <ItemGroup>
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\Music\" />
+    <Folder Include="Assets\Textures\" />
+    <Folder Include="Assets\Sounds\" />
+    <Folder Include="Common\Items\Accesories\Melee\" />
+    <Folder Include="Content\" />
+    <Folder Include="Localisation\" />
+  </ItemGroup>
 </Project>
