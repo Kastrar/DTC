@@ -1,11 +1,11 @@
 ﻿using Terraria;
-using Terraria.ModLoader;
-using Terraria.ID;
 using Terraria.GameContent.Creative;
+using Terraria.ID;
+using Terraria.ModLoader;
 
-namespace DTC.Common.Items.Tools.Pickaxes
+namespace DTC.Common.Items.Tools.Hammers
 {
-    internal class DefaultNewPickaxe : ModItem
+    internal class Bonker : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -22,10 +22,11 @@ namespace DTC.Common.Items.Tools.Pickaxes
             Item.width = 32;
             Item.height = 32;
 
-            // Item animation
+            // Item animation and sound
             Item.useStyle = ItemUseStyleID.Swing;
             Item.autoReuse = true;
             Item.useTurn = true;
+            Item.UseSound = SoundID.Item1;
 
             // Item damage
             Item.DamageType = DamageClass.Melee;
@@ -38,7 +39,7 @@ namespace DTC.Common.Items.Tools.Pickaxes
             Item.rare = ItemRarityID.Blue;
 
             // Pickaxe power and use time
-            Item.pick = 20;
+            Item.hammer = 20;
             Item.useTime = 6;
             Item.useAnimation = 60;
         }
@@ -57,7 +58,7 @@ namespace DTC.Common.Items.Tools.Pickaxes
                 .AddRecipeGroup(RecipeGroupID.Wood, 8)
                 .AddIngredient(ItemID.SandBlock, 10)
                 .Register();
-                
+
         }
 
     }

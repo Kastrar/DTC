@@ -1,11 +1,11 @@
 ﻿using Terraria;
-using Terraria.GameContent.Creative;
-using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.ID;
+using Terraria.GameContent.Creative;
 
-namespace DTC.Common.Items.Tools.Axes
+namespace DTC.Common.Items.Tools.Pickaxes
 {
-    internal class DTCPickaxe1 : ModItem
+    internal class DefaultNewTool : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -22,25 +22,28 @@ namespace DTC.Common.Items.Tools.Axes
             Item.width = 32;
             Item.height = 32;
 
-            // Item animation
+            // Item animation and sound
             Item.useStyle = ItemUseStyleID.Swing;
             Item.autoReuse = true;
             Item.useTurn = true;
+            Item.UseSound = SoundID.Item1;
 
             // Item damage
             Item.DamageType = DamageClass.Melee;
-            Item.damage = 69;
-            Item.knockBack = 3f;
-            Item.crit = 28;
+            Item.damage = 20;
+            Item.knockBack = 1f;
+            Item.crit = 10;
 
             // Item value
             Item.value = Item.buyPrice(silver: 20);
             Item.rare = ItemRarityID.Blue;
 
-            // Pickaxe power and use time
-            Item.pick = 20;
+            // Tool power and use time
             Item.useTime = 6;
             Item.useAnimation = 60;
+            Item.pick = 20;
+            Item.hammer = 20;
+            Item.axe = 20;
         }
 
         public override void AddRecipes()
@@ -57,7 +60,7 @@ namespace DTC.Common.Items.Tools.Axes
                 .AddRecipeGroup(RecipeGroupID.Wood, 8)
                 .AddIngredient(ItemID.SandBlock, 10)
                 .Register();
-
+                
         }
 
     }
