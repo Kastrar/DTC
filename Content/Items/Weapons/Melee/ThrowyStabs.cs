@@ -6,7 +6,7 @@ using DTC.Content.Projectiles.Weapons.Melee;
 
 namespace DTC.Content.Items.Weapons.Melee
 {
-    internal class DTCNewTool1 : ModItem
+    internal class ThrowyStabs : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -32,7 +32,7 @@ namespace DTC.Content.Items.Weapons.Melee
             Item.noUseGraphic = true;
             Item.noMelee = true;
             Item.shootSpeed = 2.1f;
-            Item.shoot = ModContent.ProjectileType<ThrowieStabsProjectile>();
+            Item.shoot = ModContent.ProjectileType<ThrowyStabsProjectile>();
 
             // Item speed
             Item.useTime = 12;

@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework;
 
 namespace DTC.Content.Projectiles.Weapons.Melee
 {
-    internal class ThrowieStabsProjectile : ModProjectile
+    internal class ThrowyStabsProjectile : ModProjectile
     {
         public override void SetDefaults()
         {
