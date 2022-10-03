@@ -3,7 +3,7 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace DTC.Common.Items.Tools.Axes
+namespace DTC.Content.Items.Tools.Axes
 {
     internal class TreeSlicer : ModItem
     {

@@ -3,53 +3,53 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
 
-
-namespace DTC.Common.Items.Weapons.Melee
+namespace DTC.Content.Items.Tools.Pickaxes
 {
-    internal class SlapChop : ModItem
+    internal class GraveDigger : ModItem
     {
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Slap Chop");
-            Tooltip.SetDefault("Minces \ngrinds \nCHOPS!!");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
+
         public override void SetDefaults()
         {
             base.SetDefaults();
-            // Hitbox
             Item.width = 32;
             Item.height = 32;
 
-            // Use and Animation Style
+            Item.useTime = 6;
+            Item.useAnimation = 60;
             Item.useStyle = ItemUseStyleID.Swing;
-            Item.useTime = 20;
-            Item.useAnimation = 20;
             Item.autoReuse = true;
+            Item.useTurn = true;
 
-            // Damage values
             Item.DamageType = DamageClass.Melee;
-            Item.damage = 35;
-            Item.knockBack = 4.6f;
-            Item.crit = 17;
+            Item.damage = 69;
+            Item.knockBack = 3f;
+            Item.crit = 28;
 
+            Item.value = Item.buyPrice(silver: 20);
+            Item.rare = ItemRarityID.Blue;
 
-            // Misc
-            Item.value = Item.buyPrice(copper: 80, silver: 20) ;
-            Item.maxStack = 1;
-
-            // Sound
-            Item.UseSound = SoundID.Item1;
+            Item.pick = 20;
         }
+
         public override void AddRecipes()
         {
             base.AddRecipes();
             CreateRecipe()
-                .AddIngredient(ItemID.DirtBlock, 20)
-                .AddTile(TileID.WorkBenches)
+                .AddRecipeGroup(RecipeGroupID.Wood, 8)
+                .AddIngredient(ItemID.EbonstoneBlock, 10)
                 .Register();
 
+            CreateRecipe()
+                .AddRecipeGroup(RecipeGroupID.Wood, 8)
+                .AddIngredient(ItemID.CrimstoneBlock, 10)
+                .Register();
+                
         }
+
     }
 }

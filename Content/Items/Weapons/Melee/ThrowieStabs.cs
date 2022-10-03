@@ -1,11 +1,12 @@
 ﻿using Terraria;
-using Terraria.ModLoader;
-using Terraria.ID;
 using Terraria.GameContent.Creative;
+using Terraria.ID;
+using Terraria.ModLoader;
+using DTC.Content.Projectiles.Weapons.Melee;
 
-namespace DTC.Common.Items.Tools.Pickaxes
+namespace DTC.Content.Items.Weapons.Melee
 {
-    internal class DefaultNewTool : ModItem
+    internal class DTCNewTool1 : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -22,28 +23,33 @@ namespace DTC.Common.Items.Tools.Pickaxes
             Item.width = 32;
             Item.height = 32;
 
-            // Item animation and sound
-            Item.useStyle = ItemUseStyleID.Swing;
+            // Item animation
+            Item.useStyle = ItemUseStyleID.Rapier;
             Item.autoReuse = true;
             Item.useTurn = true;
-            Item.UseSound = SoundID.Item1;
+
+            // Projectile weapon stuff
+            Item.noUseGraphic = true;
+            Item.noMelee = true;
+            Item.shootSpeed = 2.1f;
+            Item.shoot = ModContent.ProjectileType<ThrowieStabsProjectile>();
+
+            // Item speed
+            Item.useTime = 12;
+            Item.useAnimation = 12;
 
             // Item damage
             Item.DamageType = DamageClass.Melee;
-            Item.damage = 20;
-            Item.knockBack = 1f;
+            Item.damage = 28;
+            Item.knockBack = 4f;
             Item.crit = 10;
 
-            // Item value
+            // Item value and others
             Item.value = Item.buyPrice(silver: 20);
             Item.rare = ItemRarityID.Blue;
+            Item.UseSound = SoundID.Item1;
 
-            // Tool power and use time
-            Item.useTime = 6;
-            Item.useAnimation = 60;
-            Item.pick = 20;
-            Item.hammer = 20;
-            Item.axe = 20;
+
         }
 
         public override void AddRecipes()
@@ -60,7 +66,7 @@ namespace DTC.Common.Items.Tools.Pickaxes
                 .AddRecipeGroup(RecipeGroupID.Wood, 8)
                 .AddIngredient(ItemID.SandBlock, 10)
                 .Register();
-                
+
         }
 
     }

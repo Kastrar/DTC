@@ -3,7 +3,7 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace DTC.Common.Items.Tools.Hammers
+namespace DTC.Content.Items.Tools.Hammers
 {
     internal class Bonker : ModItem
     {
